@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>A Single Page Application</title>
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="../css/myBank.css" />
+  <script src="../js/spaContent.js"></script>
+  <script src="../js/account.js"></script>
+  <script src="../js/FXMLHttpRequest.js"></script>
+  <script src="../js/dataBase.js"></script>
+  <script src="../js/network.js"></script>
+  <script src="../js/server.js"></script>
+</head>
+
+<body>
+  <main>
+    <div id="content"></div>
+  </main>
+
+  <template class="contentPage" id="registration">
+    <div class="btn">
+      <button class="login">Login</button>
+      <button class="btnChangeColor">Signup</button>
+    </div>
+
+    <div class="form-section">
+      <div class="signup-box">
+        <input type="text" class="name ele" id="signupUserName" placeholder="Enter your name" />
+        <input type="number" class="id ele" id="signupId" placeholder="id" />
+        <input type="number" class="age ele" id="signupAge" placeholder="age" />
+        <input type="number" class="password ele" id="signupPassword" placeholder="password" />
+        <input type="number" class="password ele" id="signupConfirmPassword" placeholder="Confirm password" />
+        <button class="clkbtn" id="clkbtnSignup">Signup</button>
+      </div>
+    </div>
+
+    <script src="../js/registration.js"></script>
+  </template>
+
+  <template class="contentPage" id="login">
+    <div class="btn">
+      <button class="btnChangeColor">Login</button>
+      <button class="signup">Signup</button>
+    </div>
+
+    <div class="form-section">
+      <div class="login-box">
+        <input type="number" class="id ele" id="loginId" placeholder="id" />
+        <input type="number" class="password ele" id="loginPassword" placeholder="password" />
+        <button class="clkbtn" id="clkbtnLogin">Login</button>
+      </div>
+    </div>
+
+    <script src="../js/login.js"></script>
+  </template>
+
+  <template class="contentPage" id="myAccount">
+    <div class="navbar">
+      <button class="clkbtn" id="btnAccountBalance">Account balance</button>
+      <button class="clkbtn" id="btnMonthlyIncome">Monthly incomes</button>
+      <button class="clkbtn" id="btnMonthlyExpenses">Monthly expenses</button>
+      <button class="clkbtn" id="btnBankTransfer">Bank transfer</button>
+      <button class="clkbtn" id="btnCashDeposit">Cash deposit</button>
+      <button class="clkbtn" id="btnCashWithdrawal">Cash withdrawal</button>
+    </div>
+
+    <div id="contentOfAccount"></div>
+
+    <button class="clkbtn" id="btnLogOut">Log out</button>
+
+    <script src="../js/spaContentOfAcount.js"></script>
+    <script src="../js/myAccount.js"></script>
+
+  </template>
+
+  <template class="contentOfAccountPage" id="AccountBalance">
+    <h2>AccountBalance</h2>
+    <p id="sumBalance">יתרת חשבון</p>
+  </template>
+
+  <template class="contentOfAccountPage" id="MonthlyIncome">
+    <h2>MonthlyIncome</h2>
+    <table id="IncomesTable">
+      <tr>
+        <th>dates</th>
+        <th>income</th>
+      </tr>
+    </table>
+    <p id="sumOfIncomes">    :סהכ הכנסות החודש</p>
+  </template>
+
+  <template class="contentOfAccountPage" id="MonthlyExpenses">
+    <h2>MonthlyExpenses</h2>
+    <table id="ExpensesTable">
+      <tr>
+        <th>date</th>
+        <th>expenses</th>
+      </tr>
+    </table>
+    <p id="sumOfExpenses">  :סהכ הוצאות החודש</p>
+  </template>
+
+  <template class="contentOfAccountPage" id="BankTransfer">
+    <form>
+      <input type="text" class="name ele" id="BankTransferName" placeholder="Bank Transfer Name" />
+      <input type="text" class="name ele" id="BankTransferId" placeholder="Bank Transfer id" />
+      <input type="text" class="name ele" id="BankTransferSum" placeholder="BankTransfer Sum" />
+      <button id="btnTransfer">אישור </button>
+    </form>
+    <h2>BankTransfer</h2>
+  </template>
+
+  <template class="contentOfAccountPage" id="CashDeposit">
+    <h2>CashDeposit</h2>
+    <input type="text" class="name ele" id="CashDepositSum" placeholder="CashDeposit Sum" />
+    <button id="btnDeposit" class="name ele">אישור </button>
+  </template>
+
+  <template class="contentOfAccountPage" id="CashWithdrawal">
+    <h2>CashWithdrawal</h2>
+    <input type="text" class="name ele" id="CashWithdrawalSum" placeholder="CashDeposit Sum" />
+    <button id="btnWithdrawal" class="name ele">אישור </button>
+  </template>
+
+</body>
+
+</html>
